@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ratan Tata | 1937–2024 — A Timeless Tribute</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Inter', 'Helvetica Neue', sans-serif;
+      background: #fefcf5;
+      color: #1a2a2f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --tata-blue: #0b2b35;
+      --tata-gold: #c47a3b;
+      --tata-navy: #1e3a4d;
+      --warm-cream: #fef7e8;
+      --accent-teal: #2b6c7c;
+      --light-mist: #eef3f0;
+      --memorial-gray: #e2dfd7;
+    }
+
+    .site-header {
+      background: linear-gradient(145deg, #ffffff 0%, #faf5ea 100%);
+      border-bottom: 1px solid #e6dfcf;
+    }
+
+    .navbar {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--tata-blue), var(--accent-teal));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--tata-blue);
+      transition: color 0.2s, border-bottom 0.2s;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--tata-gold);
+      border-bottom-color: var(--tata-gold);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-copy {
+      flex: 1.2;
+    }
+
+    .eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--tata-gold);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-copy h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(125deg, var(--tata-blue), #1c5a68);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .life-dates {
+      font-size: 1.2rem;
+      color: #5a6e6a;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-copy p {
+      font-size: 1.25rem;
+      color: #2d4a55;
+      max-width: 90%;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--tata-blue);
+      color: white;
+      padding: 0.85rem 2rem;
+      border-radius: 2.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn:hover {
+      background: var(--accent-teal);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-image {
+      flex: 0.9;
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s;
+      object-fit: cover;
+    }
+
+    .hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-heading p {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--tata-gold);
+      font-weight: 600;
+    }
+
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--tata-blue);
+      margin-top: 0.5rem;
+    }
+
+    .intro-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .intro-text {
+      flex: 1.5;
+      font-size: 1.2rem;
+      background: var(--warm-cream);
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+      border: 1px solid #ede3cf;
+    }
+
+    .intro-stats {
+      flex: 1;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .intro-stats>div {
+      background: white;
+      padding: 1.5rem 1.2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      flex: 1;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e8e0d2;
+    }
+
+    .intro-stats span {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-teal);
+      display: block;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      background: var(--light-mist);
+      border-radius: 3rem;
+      margin: 2rem auto;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1.8rem;
+      transition: all 0.25s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e3dac8;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+      border-color: var(--tata-gold);
+    }
+
+    .card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: var(--tata-blue);
+      border-left: 4px solid var(--tata-gold);
+      padding-left: 1rem;
+    }
+
+    .timeline {
+      background: #fef8ef;
+      border-radius: 2rem;
+    }
+
+    .timeline ol {
+      list-style: none;
+      position: relative;
+      padding-left: 2rem;
+      border-left: 3px solid var(--tata-gold);
+      margin: 2rem 0 0 1rem;
+    }
+
+    .timeline li {
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .timeline li span {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--accent-teal);
+      display: inline-block;
+      width: 100px;
+      vertical-align: top;
+    }
+
+    .timeline li p {
+      display: inline-block;
+      max-width: 80%;
+      font-size: 1.05rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-item figcaption {
+      padding: 1rem;
+      text-align: center;
+      font-weight: 500;
+      background: white;
+    }
+
+    .quote-block {
+      background: var(--warm-cream);
+      border-radius: 2rem;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .quote-block blockquote {
+      font-size: 1.6rem;
+      font-style: italic;
+      color: var(--tata-navy);
+      max-width: 850px;
+      margin: 0 auto;
+      font-weight: 450;
+      line-height: 1.4;
+    }
+
+    .quote-block figcaption {
+      margin-top: 1.5rem;
+      font-weight: 600;
+      color: var(--tata-gold);
+    }
+
+    .memorial-note {
+      background: var(--memorial-gray);
+      padding: 1rem;
+      border-radius: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      color: #3a4a44;
+    }
+
+    footer {
+      background: var(--tata-blue);
+      color: #ddddcc;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.8rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: #ffefcf;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--tata-gold);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 800px) {
+      .hero-copy h1 {
+        font-size: 2.8rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-copy p {
+        max-width: 100%;
+      }
+
+      .timeline li p {
+        display: block;
+        max-width: 100%;
+        margin-top: 0.3rem;
+      }
+
+      .timeline li span {
+        width: auto;
+      }
+
+      .quote-block blockquote {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">Ratan Tata | 1937–2024</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#legacy">Legacy</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">In loving memory</p>
+        <h1>Ratan Naval Tata</h1>
+        <div class="life-dates">28 December 1937 – 9 October 2024</div>
+        <p>Industrialist, philanthropist, and the chairman emeritus who transformed the Tata Group into a global
+          powerhouse with humility, ethics, and visionary compassion.</p>
+        <a href="#about" class="btn">Honor his journey</a>
+      </div>
+      <figure class="hero-image">
+        <img src="img.png" alt="Ratan Tata portrait - visionary leader" />
+      </figure>
+    </section>
+  </header>
+
+  <main>
+    <div class="memorial-note" style="max-width: 1280px; margin: 1rem auto 0 auto;">
+      🕊️ A timeless tribute to Ratan Naval Tata (1937–2024) — his legacy continues to inspire humanity, integrity, and
+      innovation.
+    </div>
+
+    <section class="intro" id="about">
+      <div class="section-heading">
+        <p>Legend of Indian Industry</p>
+        <h2>The man who dared to dream with a heart</h2>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p><strong>Ratan Naval Tata</strong> (28 December 1937 – 9 October 2024) was an Indian industrialist,
+            philanthropist, and former chairman of Tata Sons. He served as chairman from 1991 to 2012 and again as
+            interim chairman from 2016 to 2017. Under his visionary leadership, Tata Group's revenues grew multifold,
+            transforming the conglomerate into a global force with landmark acquisitions: <strong>Tetley (2000), Corus
+              Steel (2007), and Jaguar Land Rover (2008)</strong>. Educated at Cornell University with a
+            <strong>Bachelor of Science in Architecture</strong> (1962) and later completing the Advanced Management
+            Program at Harvard Business School, Ratan Tata blended technical insight with profound empathy. Beyond
+            business, he ensured that <strong>66% of Tata Sons is held by philanthropic trusts</strong>, channeling
+            billions toward education, healthcare, rural development, and scientific research. He was honored with the
+            <strong>Padma Bhushan (2000)</strong> and <strong>Padma Vibhushan (2008)</strong>, India’s highest civilian
+            awards.
+          </p>
+        </div>
+        <div class="intro-stats">
+          <div>
+            <span>1937–2024</span>
+            <p>Life of service & leadership</p>
+          </div>
+          <div>
+            <span>66%</span>
+            <p>of Tata Sons owned by charitable trusts</p>
+          </div>
+          <div>
+            <span>Padma Vibhushan</span>
+            <p>India’s 2nd highest civilian honor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards" id="legacy">
+      <article class="card reveal">
+        <h3>Global Visionary</h3>
+        <p>Led Tata Group’s global expansion: Tetley (2000), Corus Steel (2007), and Jaguar Land Rover (2008).
+          Transformed a Indian conglomerate into an international powerhouse.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Tata Nano & Empathy</h3>
+        <p>Inspired by a family riding a scooter in Mumbai, he envisioned the Tata Nano — the world’s most affordable
+          car — embodying engineering innovation with deep compassion.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Philanthropy First</h3>
+        <p>Through Tata Trusts, he expanded cancer care, scientific research, and rural upliftment. Donated over $1
+          billion+ to various causes, including Cornell University and the Indian Institute of Science.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Honors & Legacy</h3>
+        <p>Recipient of Padma Bhushan (2000), Padma Vibhushan (2008), Honorary KBE (2009), Grand Cordon of the Order of
+          the Rising Sun (2012), and the Legion of Honour (2016).</p>
+      </article>
+    </section>
+
+    <section class="timeline" id="timeline">
+      <div class="section-heading">
+        <p>Life & Milestones</p>
+        <h2>Key moments in Ratan Tata's journey</h2>
+      </div>
+      <ol>
+        <li><span>1937</span>
+          <p>Born on 28 December in Bombay (now Mumbai) to Naval and Soonoo Tata.</p>
+        </li>
+        <li><span>1962</span>
+          <p>Earns Bachelor of Science in Architecture from Cornell University.</p>
+        </li>
+        <li><span>1971</span>
+          <p>Joins Tata Group as a director of Tata Industries.</p>
+        </li>
+        <li><span>1991</span>
+          <p>Becomes chairman of Tata Sons, succeeding J.R.D. Tata. Initiates bold restructuring.</p>
+        </li>
+        <li><span>1998</span>
+          <p>Launches Tata Indica — India’s first fully indigenous passenger car.</p>
+        </li>
+        <li><span>2000</span>
+          <p>Tata Tea acquires Tetley Group, marking first major global acquisition.</p>
+        </li>
+        <li><span>2008</span>
+          <p>Tata Motors unveils Tata Nano; Tata acquires Jaguar Land Rover. Receives Padma Vibhushan.</p>
+        </li>
+        <li><span>2012</span>
+          <p>Retires as chairman of Tata Sons, dedicates full time to Tata Trusts.</p>
+        </li>
+        <li><span>2016–17</span>
+          <p>Serves as interim chairman of Tata Sons during leadership transition.</p>
+        </li>
+        <li><span>2024</span>
+          <p>Passes away peacefully on 9 October in Mumbai, leaving behind an immortal legacy of ethics, innovation, and
+            humility.</p>
+        </li>
+      </ol>
+    </section>
+
+    <div class="quote-block">
+      <blockquote>
+        “I don't believe in taking right decisions. I take decisions and then make them right.”
+      </blockquote>
+      <figcaption>— Ratan Tata</figcaption>
+    </div>
+
+    <section class="gallery" id="gallery">
+      <div class="section-heading">
+        <p>Visual Journey</p>
+        <h2>Moments that defined an era</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=800&q=80"
+            alt="Engineering and innovation spirit" />
+          <figcaption>Tata Nano: engineering from heart.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="img1.png" alt="Global business leadership" />
+          <figcaption>Leading Tata Group on world stage.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+            alt="Philanthropy and community" />
+          <figcaption>Philanthropy: building a better tomorrow.</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1565049786474-1dea82a8b995?auto=format&fit=crop&w=800&q=80"
+            alt="Tata Motors factory legacy" />
+          <figcaption>Industrial excellence & innovation.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="quote-block" style="background: var(--light-mist);">
+      <blockquote>
+        “Ups and downs in life are very important to keep us going, because a straight line even in an ECG means we are
+        not alive.”
+      </blockquote>
+      <figcaption>— Ratan Tata</figcaption>
+    </div>
+
+    <section style="background: white; border-radius: 2rem; margin: 1rem auto 2rem;">
+      <div style="max-width: 1000px; margin: 0 auto; text-align: center; padding: 2rem 1.5rem;">
+        <h3 style="font-size: 1.7rem; color: var(--tata-blue);">A legacy beyond business</h3>
+        <p style="margin-top: 1rem; font-size: 1.1rem;">Ratan Tata invested in more than 30 startups, championed animal
+          welfare, funded cancer research, and lived with profound humility. Even after his passing, his ethos of
+          ethical capitalism, empathy, and “giving back to society” remains a beacon for millions. The nation observed a
+          state funeral, and his final journey was a testament to a leader who never separated success from service.</p>
+        <p
+          style="margin-top: 1rem; font-size: 1rem; background: var(--warm-cream); padding: 1rem; border-radius: 2rem;">
+          📜 <strong>Honorary distinctions:</strong> Knight Commander of the Order of the British Empire (KBE), Grand
+          Cordon of the Order of the Rising Sun (Japan), and France’s highest civilian award, the Légion d’Honneur.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>In everlasting memory of <strong>Ratan Naval Tata</strong> (1937–2024) — a titan of industry, a quiet
+      philanthropist, and a giant with a gentle heart.</p>
+    <div class="social-links">
+      <a href="https://en.wikipedia.org/wiki/Ratan_Tata" target="_blank" rel="noreferrer">Biography</a>
+      <a href="https://www.tatatrusts.org/" target="_blank" rel="noreferrer">Tata Trusts</a>
+      <a href="https://www.tata.com/" target="_blank" rel="noreferrer">Tata Group</a>
+      <a href="https://www.cornell.edu/" target="_blank" rel="noreferrer">Cornell University — Alma Mater</a>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem;">“The greatest lessons are not taught — they are lived.” — A
+      tribute page honoring his eternal legacy. ✨</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+
+    revealElements.forEach(el => observer.observe(el));
+
+    // smooth scroll for navigation
+    document.querySelectorAll('.nav-links a, .btn, .logo').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const hash = this.getAttribute('href');
+        if (hash && hash.startsWith('#')) {
+          const targetId = hash.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
